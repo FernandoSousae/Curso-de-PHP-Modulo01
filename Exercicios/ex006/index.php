@@ -14,7 +14,7 @@
     ?>
     <main>
         <h1>Somador de Valores</h1>
-        <form action="<?$_SERVER['PHP_SELF']?>" method="get">
+        <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="v1">Valor 1</label>
             <input type="number" name="v1" id="v1" value="<?=$valor1?>">
             <label for="v2">Valor 2</label>
