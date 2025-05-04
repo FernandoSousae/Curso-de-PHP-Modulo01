@@ -9,14 +9,14 @@
 <body>
     <?php
         $salario = $_GET['salario'] ?? 0;
-        $salmin = 1380;
+        $salmin = 1_518.10;
     ?>
     <main>
         <h1>Informe seu Salário</h1>
         <form action="" method="get">
             <label for="salario">Salário</label>
             <input type="number" name="salario" id="salario" value="<?=$salario?>">
-            <p>Considerando o salário mínimo de <strong>R$1.380,00</strong></p>
+            <p>Considerando o salário mínimo de <strong>R$<?=number_format($salmin, 2, ",",".")?></strong></p>
             <input type="submit" value="Calcular">
         </form>
     </main>
@@ -26,7 +26,7 @@
         <?php
             $qtdsal = (int) ($salario / $salmin);
             $resto = $salario % $salmin;
-            echo "<p>Quem recebe um salário de R$$salario ganha <strong>$qtdsal salários mínimos</strong> + R$$resto.</p>"
+            echo "<p>Quem recebe um salário de R$$salario ganha <strong>$qtdsal salários mínimos</strong> + R$ ".number_format($resto, 2, ",",".").".</p>"
         ?>
     </section>
     
