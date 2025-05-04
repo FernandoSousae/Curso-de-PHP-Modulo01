@@ -13,7 +13,7 @@
     ?>
     <main>
         <h1>Informe seu Salário</h1>
-        <form action="" method="get">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="salario">Salário</label>
             <input type="number" name="salario" id="salario" value="<?=$salario?>">
             <p>Considerando o salário mínimo de <strong>R$<?=number_format($salmin, 2, ",",".")?></strong></p>
