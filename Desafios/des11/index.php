@@ -9,7 +9,7 @@
 <body>
     <?php
         $preco = $_REQUEST['preco'] ?? '0';
-        $reaj = $_REQUEST['real'] ?? '0';
+        $reaj = $_REQUEST['reaj'] ?? '0';
     ?>
 
     <main>
